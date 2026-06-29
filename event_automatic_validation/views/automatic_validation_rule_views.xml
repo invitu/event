@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 INVITU (<https://www.invitu.com>)
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="view_automatic_validation_rule_form_event" model="ir.ui.view">
+        <field name="model">automatic.validation.rule</field>
+        <field
+            name="inherit_id"
+            ref="base_automatic_validation.view_automatic_validation_rule_form"
+        />
+        <field name="arch" type="xml">
+            <field name="model" position="after">
+                <field name="event_type_id" invisible="event_id" />
+                <field name="event_id" invisible="event_type_id" />
+            </field>
+        </field>
+    </record>
+</odoo>
